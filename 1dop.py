@@ -70,7 +70,12 @@ for i in range(t):
     sunny_array.append(sunny)
     rainy_array.append(rainy)
     t_array.append(i)
-plt.plot(t_array, sunny_array, t_array,  rainy_array, t_array, p_th_sunny_array, t_array, p_th_rainy_array)
+f, ax = plt.subplots()
+ax.plot(t_array, sunny_array, label ='sunny ')
+ax.plot(t_array,  rainy_array,label ='rainy')
+ax.plot(t_array, p_th_sunny_array, label ='sunny_th ')
+ax.plot(t_array, p_th_rainy_array, label ='rainy_th')
+ax.legend()
 plt.show()
 
 
