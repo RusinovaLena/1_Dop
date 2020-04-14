@@ -52,7 +52,9 @@ def experiments(n):
     print("Count_rainy: ", countRainy)
     return countSunny / count
 
-
+p_th_sunny_array = []
+p_th_rainy_array = []
+print("Result:")
 for i in range(t):
     print(i)
     sunny = experiments(i)
@@ -63,10 +65,12 @@ for i in range(t):
     print("P_th_sunny: ", p_th_sunny)
     p_th_rainy = 1 - p_th_sunny
     print("P_th_sunny: ", p_th_rainy)
+    p_th_sunny_array.append(p_th_sunny)
+    p_th_rainy_array.append(p_th_rainy)
     sunny_array.append(sunny)
     rainy_array.append(rainy)
     t_array.append(i)
-plt.plot(t_array, sunny_array, rainy_array)
+plt.plot(t_array, sunny_array, t_array,  rainy_array, t_array, p_th_sunny_array, t_array, p_th_rainy_array)
 plt.show()
 
 
